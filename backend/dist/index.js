@@ -6,10 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const prolo_1 = __importDefault(require("./routes/prolo"));
 const balance_1 = __importDefault(require("./routes/balance"));
+const profit_loss_1 = __importDefault(require("./routes/profit-loss"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use("/reports", prolo_1.default);
 app.use("/asset", balance_1.default);
+app.use("/profitlosscalculatot", profit_loss_1.default);
 app.listen(3000, function () {
     console.log("server listening on port");
 });
