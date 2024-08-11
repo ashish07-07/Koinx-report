@@ -5,7 +5,8 @@ mongoose.connect(
 );
 
 const Tradeschema = new mongoose.Schema({
-  date: String,
+  date: Date,
+  amount: Number,
   Trasactiontype: String,
   Cryptocurrency: String,
   Price: Number,

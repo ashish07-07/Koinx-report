@@ -41,7 +41,9 @@ router.post("/uploads", uploads.single("file"), function (req, res) {
                 console.log(results);
                 const trades = results.map(function (val) {
                     return new db_1.default({
-                        date: val.Date,
+                        //   date: val.Date,
+                        date: new Date(val.Date),
+                        amount: parseFloat(val.Amount),
                         Trasactiontype: val[" Transaction-type"],
                         Cryptocurrency: val.Cryptocurrency,
                         Price: parseFloat(val["Price per Unit"]),

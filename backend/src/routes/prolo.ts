@@ -37,7 +37,9 @@ router.post(
 
           const trades = results.map(function (val) {
             return new Trade({
-              date: val.Date,
+              //   date: val.Date,
+              date: new Date(val.Date),
+              amount: parseFloat(val.Amount),
               Trasactiontype: val[" Transaction-type"],
               Cryptocurrency: val.Cryptocurrency,
               Price: parseFloat(val["Price per Unit"]),
