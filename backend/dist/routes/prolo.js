@@ -18,7 +18,9 @@ const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const csv_parser_1 = __importDefault(require("csv-parser"));
 const db_1 = __importDefault(require("../db"));
+const cors_1 = __importDefault(require("cors"));
 const router = express_1.default.Router();
+router.use((0, cors_1.default)());
 const uploads = (0, multer_1.default)({ dest: path_1.default.join(__dirname, "uploads") });
 const results = [];
 router.post("/uploads", uploads.single("file"), function (req, res) {

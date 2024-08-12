@@ -1,8 +1,4 @@
 "use strict";
-// import express from "express";
-// import { Request, Response } from "express";
-// const router = express.Router();
-// import Trade from "../db";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -16,40 +12,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// router.get("/costbasis", async function (req: Request, res: Response) {
-//   try {
-//     console.log("inside the profirloss routes");
-//     const trades = await Trade.find();
-//     const profit: { [key: string]: number } = {};
-//     trades.forEach(function (val) {
-//       const { amount, Price, Fees, Trasactiontype, Cryptocurrency } = val;
-//       if (amount && Price && Cryptocurrency) {
-//         if (!profit[Cryptocurrency]) {
-//           profit[Cryptocurrency] = 0;
-//         }
-//         if (Trasactiontype === "Buy") {
-//           const buyAmount = amount * Price + (Fees || 0);
-//           profit[Cryptocurrency] += buyAmount;
-//         } else if (Trasactiontype === "Sell") {
-//           const sellAmount = amount * Price;
-//           profit[Cryptocurrency] -= sellAmount;
-//         }
-//       }
-//     });
-//     console.log(profit);
-//     return res.status(200).json({
-//       netProfit: profit,
-//     });
-//   } catch (error) {
-//     console.error("Error fetching trades:", error);
-//     return res.status(500).json({ error: "Internal Server Error" });
-//   }
-// });
-// export default router;
-// /reports/abciossst;
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 const db_1 = __importDefault(require("../db"));
+const cors_1 = __importDefault(require("cors"));
+router.use((0, cors_1.default)());
 router.get("/costbasis", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
