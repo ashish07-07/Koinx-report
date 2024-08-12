@@ -1,8 +1,11 @@
 import express from "express";
 import { Request, Response } from "express";
 const router = express.Router();
-import Trade from "../db";
 
+import Trade from "../db";
+import cors from "cors";
+
+router.use(cors());
 router.get("/costbasis", async function (req: Request, res: Response) {
   try {
     const trades = await Trade.find();

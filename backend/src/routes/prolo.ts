@@ -5,9 +5,13 @@ import fs from "fs";
 import csv from "csv-parser";
 import Trade from "../db";
 
+import cors from "cors";
+
 import { Request, Response } from "express";
 
 const router = express.Router();
+
+router.use(cors());
 
 const uploads = multer({ dest: path.join(__dirname, "uploads") });
 
