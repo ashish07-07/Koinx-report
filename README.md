@@ -80,6 +80,10 @@ This Project is designed to calculate the cost basis and net profit for cryptocu
     }
     ```
 
-    ![Profit/loss of BTC/Cryptography](./images/profit.png)
+<!-- http://localhost:3000/profitlosscalculatot/costbasis -->
+
+- **POST http://localhost:3000/profitlosscalculatot/costbasis**
+
+  ![Profit/loss of BTC/Cryptography](./images/profit.png)
 
 ### Example
