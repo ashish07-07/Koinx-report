@@ -53,6 +53,12 @@ This Project is designed to calculate the cost basis and net profit for cryptocu
    npm start
    ```
 
+- **POST http://localhost:3000/reports/uploads**
+
+![data base](./images/parsed.png)
+
+![data base](./images/databse.png)
+
 ## Databse snapshot
 
 ![Users in Database](./images/databse.png)
