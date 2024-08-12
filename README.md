@@ -55,7 +55,7 @@ This Project is designed to calculate the cost basis and net profit for cryptocu
 
 ## Databse snapshot
 
-![New users](./images/databse.png)
+![Users in Database](./images/databse.png)
 
 ## Usage
 
@@ -80,15 +80,6 @@ This Project is designed to calculate the cost basis and net profit for cryptocu
     }
     ```
 
-    ![New users](./public/image.png)
+    ![Profit/loss of BTC/Cryptography](./images/profit.png)
 
 ### Example
-
-![New users](./public/image2.png)
-
-## Project Structure
-
-- **src/**
-  - `index.ts`: Entry point of the application.
-  - `routes/`: Contains the API route handlers.
-  - `db/schema.ts`: Defines the Mongoose schema for the transactions.
